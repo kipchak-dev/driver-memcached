@@ -1,0 +1,21 @@
+{
+    "name": "kipchak/driver-memcached",
+    "type": "middleware",
+    "description": "A Kipchak Memcached driver (dependency) for the Kipchak API Development Kit (ADK)",
+    "keywords": [
+        "APIs",
+        "Memcached",
+        "Microservices",
+        "Mamluk"
+    ],
+    "homepage": "https://mamluk.net",
+    "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "symfony/cache": "^6.4"
+    }
+}
