@@ -13,9 +13,16 @@
     "config": {
         "sort-packages": true
     },
+    "autoload": {
+        "psr-4": {
+            "Mamluk\\Kipchak\\Driver\\Memcached\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "symfony/cache": "^6.4"
+        "symfony/cache": "^6.4",
+        "kipchak/core": "2.x-dev",
+        "ext-memcached": "*"
     }
 }
