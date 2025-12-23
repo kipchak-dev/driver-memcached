@@ -10,7 +10,7 @@ use Memcached as MC;
 
 class Driver implements Interfaces\Driver
 {
-    protected static ContainerInterface $container;
+    protected static ?ContainerInterface $container = null;
 
     public static function initialise(ContainerInterface $container): void
     {
