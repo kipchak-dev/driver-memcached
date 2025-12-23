@@ -1,11 +1,11 @@
 <?php
 
-namespace Mamluk\Kipchak\Driver\Memcached;
+namespace Kipchak\Driver\Memcached;
 
-use Mamluk\Kipchak\Interfaces;
+use Kipchak\Core\Interfaces;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Cache\Adapter\MemcachedAdapter;
-use Mamluk\Kipchak\Driver\Config\Driver as Config;
+use Kipchak\Driver\Config\Driver as Config;
 use Memcached as MC;
 
 class Driver implements Interfaces\Driver

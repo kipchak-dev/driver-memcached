@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mamluk\\Kipchak\\Driver\\Memcached\\": "src/"
+            "Kipchak\\Driver\\Memcached\\": "src/"
         }
     },
     "minimum-stability": "dev",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b28fc3065b2562a7fbfa7dd581554c7b",
+    "content-hash": "552f5f21eb80fcb57b865fe682966adc",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -2025,7 +2025,7 @@
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/core",
-                "reference": "045610d10a87e41e7dce0598a62ecb31b0461a13"
+                "reference": "4080ea2ebbfc9156fb4dc5b372ada1493d6d914b"
             },
             "require": {
                 "cuyz/valinor": "^1.17",
@@ -2034,6 +2034,7 @@
                 "guzzlehttp/guzzle": "^7.10",
                 "illuminate/http": "^12.40",
                 "kipchak/driver-config": "dev-master",
+                "kipchak/driver-filecache": "dev-master",
                 "monolog/monolog": "^3.9",
                 "php": ">=8.4",
                 "php-di/php-di": "^7.1",
@@ -2047,7 +2048,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Mamluk\\Kipchak\\": "src/"
+                    "Kipchak\\Core\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2060,7 +2061,7 @@
                 "apis",
                 "microservices"
             ],
-            "time": "2025-12-23T06:41:47+00:00"
+            "time": "2025-12-23T10:00:48+00:00"
         },
         {
             "name": "kipchak/driver-config",
@@ -2068,7 +2069,7 @@
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/drivers/config",
-                "reference": "7eb802475619ad797535ad5e08dd8af8672e6814"
+                "reference": "6e066046d7be5b1f1c8728c5695e6df3f31ab7ad"
             },
             "require": {
                 "kipchak/core": "2.x-dev"
@@ -2077,7 +2078,7 @@
             "type": "middleware",
             "autoload": {
                 "psr-4": {
-                    "Mamluk\\Kipchak\\Driver\\Config\\": "src/"
+                    "Kipchak\\Driver\\Config\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2093,7 +2094,41 @@
                 "http",
                 "microservices"
             ],
-            "time": "2025-12-23T06:46:28+00:00"
+            "time": "2025-12-23T10:04:30+00:00"
+        },
+        {
+            "name": "kipchak/driver-filecache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://1x.ax/mamluk/kipchak/drivers/filecache",
+                "reference": "186f908a2fdfc368c6117a7dba46fd956d8e7166"
+            },
+            "require": {
+                "kipchak/core": "2.x-dev",
+                "symfony/cache": "^6.4"
+            },
+            "default-branch": true,
+            "type": "dependency",
+            "autoload": {
+                "psr-4": {
+                    "Mamluk\\Kipchak\\Driver\\Filecache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A File based Caching Kipchak driver (dependency) for the Kipchak API Development Kit (ADK)",
+            "homepage": "https://mamluk.net",
+            "keywords": [
+                "Mamluk",
+                "apis",
+                "cache",
+                "http",
+                "microservices"
+            ],
+            "time": "2025-12-23T09:24:48+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5982,7 +6017,9 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "ext-memcached": "*"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
