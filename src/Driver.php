@@ -16,6 +16,7 @@ class Driver implements Interfaces\Driver
     public static function initialise(ContainerInterface $container): void
     {
         self::$container = $container;
+        self::set();
     }
 
     public static function set(): void
@@ -34,16 +35,7 @@ class Driver implements Interfaces\Driver
 
     public static function get(?string $configKey = null): MemcachedAdapter
     {
-        if (self::$container !== null) {
-            return self::$container->get('drivers.cache.memcached.' . $configKey ?? 'cache');
-        }
-
-        $memcachedConfig = Config::get('kipchak.memcached');
-        $poolConnection = $memcachedConfig['pools'][$configKey] ?? 'cache';
-        $poolName = $configKey ?? 'cache';
-
-        return self::createAdapter($memcachedConfig, $poolConnection, $poolName);
-
+        return self::$container->get('drivers.cache.memcached.' . $configKey ?? 'cache');
     }
 
     protected static function createAdapter($memcachedConfig, $poolConnection, $poolName): MemcachedAdapter
