@@ -8,7 +8,7 @@ use Symfony\Component\Cache\Adapter\MemcachedAdapter;
 use Kipchak\Driver\Config\Driver as Config;
 use Memcached as MC;
 
-class Driver implements Interfaces\Driver
+class Memcached implements Interfaces\Driver
 {
     protected static ?ContainerInterface $container = null;
 
