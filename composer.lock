@@ -146,7 +146,7 @@
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/core",
-                "reference": "0f281087fc476a80864b4aa8bcb73a320c150da3"
+                "reference": "f89b0ac7143bd09cfcc1ec1f57b9b2c8d77f5e21"
             },
             "require": {
                 "cuyz/valinor": "^1.17",
@@ -175,7 +175,7 @@
                 "apis",
                 "microservices"
             ],
-            "time": "2025-12-25T08:02:10+00:00"
+            "time": "2025-12-25T09:09:00+00:00"
         },
         {
             "name": "kipchak/driver-config",
@@ -183,7 +183,7 @@
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/drivers/config",
-                "reference": "5a7dfaef57a87217c3bb5cdd0ded81e84990d505"
+                "reference": "20867eb0bdf56da07e60de8e52372a91f883c7f7"
             },
             "require": {
                 "kipchak/core": "2.x-dev"
@@ -208,7 +208,7 @@
                 "http",
                 "microservices"
             ],
-            "time": "2025-12-25T07:58:14+00:00"
+            "time": "2025-12-25T09:56:25+00:00"
         },
         {
             "name": "laravel/serializable-closure",
