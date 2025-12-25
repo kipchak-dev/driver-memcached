@@ -13,16 +13,17 @@ class Driver implements Interfaces\Driver
     protected static ?ContainerInterface $container = null;
 
 
-    public static function initialise(ContainerInterface $container): void
+    public static function initialise(ContainerInterface $container, ?string $configFileName = null): void
     {
         self::$container = $container;
-        self::set();
+        self::set($configFileName);
     }
 
-    public static function set(): void
+    public static function set(?string $configFileName = null): void
     {
-        if (!empty(Config::get('kipchak.memcached'))) {
-            $memcachedConfig = Config::get('kipchak.memcached');
+        $configFileName = $configFileName ?? 'kipchak.memcached';
+        if (!empty(Config::get($configFileName))) {
+            $memcachedConfig = Config::get($configFileName);
             if ($memcachedConfig['enabled'] && isset($memcachedConfig['pools'])) {
                 foreach ($memcachedConfig['pools'] as $poolName => $poolConnection) {
                     self::$container->set('drivers.cache.memcached.' . $poolName, function (ContainerInterface $c) use ($memcachedConfig, $poolConnection, $poolName): MemcachedAdapter {
