@@ -1,4 +1,4 @@
-# CouchDB Driver for Kipchak
+# Memcached Driver for Kipchak
 
 This is a memcached caching driver for Kipchak. It's based on the Symfony Cache Component `symfony/cache`.
 
