@@ -70,7 +70,7 @@ Install it via composer: `composer require kipchak/driver-memcached`.
 
 ```php
 // Load the HTTP driver.
-$cache = \Mamluk\Kipchak\Driver\Memcached\Memcached::get('cache'); // Cache is a pool name defined in the config file.
+$cache = \Kipchak\Driver\Memcached\Memcached::get('cache'); // Cache is a pool name defined in the config file.
 // Use the $cache client as you would the Symfony Cache Component.
 ```
 
