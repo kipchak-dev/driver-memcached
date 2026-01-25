@@ -179,11 +179,11 @@
         },
         {
             "name": "kipchak/driver-config",
-            "version": "1.4",
+            "version": "1.5",
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/drivers/config",
-                "reference": "6fbbe8736846cbc364b6e92ace135017fb447391"
+                "reference": "48d0930a35d1e144e937d68adddd09d081457eb1"
             },
             "require": {
                 "kipchak/core": "^2"
@@ -207,7 +207,7 @@
                 "http",
                 "microservices"
             ],
-            "time": "2026-01-25T07:52:06+00:00"
+            "time": "2026-01-25T08:05:41+00:00"
         },
         {
             "name": "laravel/serializable-closure",
