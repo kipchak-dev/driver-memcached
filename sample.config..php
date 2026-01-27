@@ -3,7 +3,6 @@
 use function Kipchak\Core\env;
 
 return [
-    'enabled' => true,
     'pools' => [
         'cache' => [
             [

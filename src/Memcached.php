@@ -24,7 +24,7 @@ class Memcached implements Interfaces\Driver
         $configFileName = $configFileName ?? 'kipchak.memcached';
         if (!empty(Config::get($configFileName))) {
             $memcachedConfig = Config::get($configFileName);
-            if ($memcachedConfig['enabled'] && isset($memcachedConfig['pools'])) {
+            if (isset($memcachedConfig['pools'])) {
                 foreach ($memcachedConfig['pools'] as $poolName => $poolConnection) {
                     self::$container->set('drivers.cache.memcached.' . $poolName, function (ContainerInterface $c) use ($memcachedConfig, $poolConnection, $poolName): MemcachedAdapter {
                         return self::createAdapter($memcachedConfig, $poolConnection, $poolName);

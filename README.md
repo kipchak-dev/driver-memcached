@@ -21,7 +21,6 @@ The config file should look like this (also avalable in sample.config.php):
 use function Mamluk\Kipchak\env;
 
 return [
-    'enabled' => true,
     'pools' => [
         'cache1' => [
             [
