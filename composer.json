@@ -22,7 +22,7 @@
     "prefer-stable": true,
     "require": {
         "symfony/cache": "^8",
-        "kipchak/core": "^2",
+        "kipchak/core": "^2 || ^3",
         "kipchak/driver-config": "^1",
         "ext-memcached": "*"
     }
