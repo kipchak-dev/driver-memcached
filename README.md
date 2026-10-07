@@ -73,6 +73,18 @@ $cache = \Kipchak\Driver\Memcached\Memcached::get('cache'); // Cache is a pool n
 // Use the $cache client as you would the Symfony Cache Component.
 ```
 
+### Raw connection
+
+PSR-6 cannot express atomic operations such as `add`, `increment` or `cas`. For those, `connection()` returns the
+pool's underlying `\Memcached` client, the same one its cache adapter uses.
+
+```php
+$memcached = \Kipchak\Driver\Memcached\Memcached::connection('cache');
+$firstSeen = $memcached->add('myapi.nonce.abc', 1, 300); // false if the key already exists
+```
+
+Keys written through the raw connection are not namespaced by the adapter, so prefix your own keys.
+
 ## What is a Kipchak Driver?
 
 Kipchak Drivers are used to connect Kipchak to various data sources or storage systems.
